@@ -10,12 +10,12 @@ function targetTerdekat(arr) {
 	var a = o1-x1;
 	}
 	else {return 0}
-	var reverse = [];
+	var balik = [];
 	for (let i =arr.length; 0<i; i-- ) {
-		reverse[reverse.length] = arr[i-1];
+		balik[balik.length] = arr[i-1];
 	}
-	var x2 = reverse.indexOf('x');
-	var o2 = reverse.indexOf('o');
+	var x2 = balik.indexOf('x');
+	var o2 = balik.indexOf('o');
 	if (x2>=o2 && x2!=-1 && o2!=-1) {
 	var b = x2-o2;
 	}
@@ -29,7 +29,6 @@ function targetTerdekat(arr) {
 	else if (a<=b ) {
 		return a
 	}
-	else { return 0}
 }
 
 // TEST CASES

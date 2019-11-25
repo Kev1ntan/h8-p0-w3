@@ -2,24 +2,17 @@
 console.log('Logic Challenge - Pasangan Angka Terbesar');
 function pasanganTerbesar(num) {
 	var string = num + '';
-	var pisah = [];
-	for (let i=0; i<string.length; i++) {
-		pisah[pisah.length] = string[i];
-	}
 	var pasangan = [];
-	for (let i = 0; i<pisah.length-1; i++) {
-		pasangan[pasangan.length] = pisah[i]+pisah[i+1];	
-	}
-	for (let i=0; i<pasangan.length; i++) {
-		pasangan[i] = parseInt(pasangan[i]);
+	for (let i = 0; i<string.length-1; i++) {
+		pasangan[pasangan.length] = string[i]+string[i+1];	
 	}
 	for (let i=0; i<pasangan.length; i++) {
 		var temp =0;
 		for (let j=0; j<pasangan.length; j++) {
-			if(pasangan[i]>pasangan[j]) {
+			if(parseInt(pasangan[i])>parseInt(pasangan[j])) {
 			}
-			else {temp = temp + pasangan[i];
-				pasangan[i] = pasangan[j];
+			else {temp = temp + parseInt(pasangan[i]);
+				pasangan[i] = parseInt(pasangan[j]);
 				pasangan[j] = temp;
 				temp = 0;}
 		}

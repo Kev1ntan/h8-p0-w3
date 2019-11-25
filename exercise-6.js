@@ -1,23 +1,15 @@
 //Logic Challenge - Number Palindrome
 console.log('Logic Challenge - Number Palindrome');
 function angkaPalindrome(num) {
+	num+=1;
 	while(num<num+1) {
 		var angka = num + '';
-		var pisah = [];
-		for (let i=0; i<angka.length; i++) {
-			pisah[pisah.length] = angka[i];
+		var sesudah = '';
+		for (let i=angka.length; i>0; i--) {
+			sesudah = sesudah + angka[i-1]
 		}
-		var balik = [];
-		for (let i=pisah.length; i>0; i--) {
-			balik[balik.length] = pisah[i-1];
-		}
-		var join = '';
-		for (let i=0; i<balik.length; i++) {
-			join = join + balik[i];
-		}
-		var number = parseInt(join);
-		if (num==number) {
-		return number;
+		if (num==sesudah) {
+		return num;
 		}
 		else {num++;};
 	}
